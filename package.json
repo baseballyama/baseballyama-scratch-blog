@@ -1,0 +1,30 @@
+{
+  "name": "baseballyama-scratch-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack && webpack serve --mode development --watch",
+    "build": "webpack && gh-pages -d dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baseballyama/baseballyama-scratch-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baseballyama/baseballyama-scratch-blog/issues"
+  },
+  "homepage": "https://github.com/baseballyama/baseballyama-scratch-blog#readme",
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "ts-loader": "^8.0.12",
+    "typescript": "^4.1.3",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^3.11.1"
+  }
+}
