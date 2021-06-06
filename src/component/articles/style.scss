@@ -1,0 +1,13 @@
+@import "@/style/style.scss";
+
+.flex {
+  display: flex;
+  justify-content: center;
+  .articles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    max-width: 780px;
+  }
+}

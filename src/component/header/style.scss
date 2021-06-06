@@ -1,0 +1,17 @@
+@import "@/style/style.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #07090b;
+  color: #ffffff;
+  div {
+    margin: 0 auto;
+    max-width: 780px;
+    padding: $space-l 0;
+    a {
+      margin: 0 $space-l;
+    }
+  }
+}

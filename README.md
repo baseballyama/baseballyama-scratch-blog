@@ -7,4 +7,5 @@ npm install typescript ts-loader webpack webpack-cli webpack-dev-server --save-d
 
 # デプロイ先 URL
 
+https://site.baseballyama.tokyo/
 https://baseballyama.github.io/baseballyama-scratch-blog/
