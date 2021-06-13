@@ -16,14 +16,31 @@ export default class ArticlePage extends PageBase {
   private fetchArticle() {
     const xmlhttp = new XMLHttpRequest();
     const articleFileName = this.getArticleFileName();
-    console.log(articleFileName);
     xmlhttp.open("GET", `/articles/${articleFileName}`, false);
     xmlhttp.send();
     if (xmlhttp.readyState == 4) {
       if (xmlhttp.status == 200) {
-        this.article = marked(xmlhttp.responseText);
+        this.article = marked(xmlhttp.responseText, {
+          renderer: this.renderer,
+        });
       }
     }
+  }
+
+  private get renderer() {
+    const renderer = new marked.Renderer();
+    renderer.link = function (href, title, text) {
+      return (
+        '<a target="_blank" rel="noopener noreferrer" href="' +
+        href +
+        '" title="' +
+        title +
+        '">' +
+        text +
+        "</a>"
+      );
+    };
+    return renderer;
   }
 
   private getArticleFileName(): string {

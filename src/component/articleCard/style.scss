@@ -1,22 +1,5 @@
 @import "@/style/style.scss";
 
-@media screen and (max-width: 768px) {
-  .article-card-sp {
-    display: block;
-  }
-  .article-card-pc {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .article-card-sp {
-    display: none;
-  }
-  .article-card-pc {
-    display: block;
-  }
-}
-
 .article-card-pc {
   @include hoverable();
   margin: $space-xl 0;
@@ -27,31 +10,27 @@
     .left {
       flex: 1;
       min-width: 0;
-      margin: $space-l 0;
-      max-width: 780px;
       display: flex;
       flex-direction: column;
+      margin: $space-m 0;
+      max-width: 780px;
       .fileName {
         @include three-point-reader;
         margin: 0;
       }
-      .createdAt {
-        margin: $space-s 0 0 auto;
-        font-size: $font-size-s;
-      }
       .summary {
         margin-top: $space-xl;
+      }
+      .createdAt {
+        margin: auto 0 0 auto;
+        font-size: $font-size-s;
       }
     }
 
     .right {
       width: 240px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
+      margin: 0 0 0 $space-xl;
       img {
-        margin: 0 0 0 $space-xl;
         max-width: 240px;
       }
     }
@@ -60,30 +39,34 @@
 
 .article-card-sp {
   @include hoverable();
-  padding: $space-xl $space-l $space-xl 0;
+  padding: $space-l $space-m $space-l 0;
   width: 100%;
   max-width: 400px;
   .article {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    .fileName {
-      width: 100%;
-      @include three-point-reader;
-      margin: 0;
-    }
-    .createdAt {
-      margin: $space-s 0 0 auto;
-      font-size: $font-size-s;
-    }
-    .summary {
-      margin-top: $space-xl;
+    align-items: stretch;
+    width: 100%;
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      margin-right: $space-m;
+      width: 80%;
+      .fileName {
+        width: 100%;
+        @include two-lines-three-point-reader;
+        font-size: $font-size-xl;
+        margin-bottom: auto;
+      }
+      .createdAt {
+        display: block;
+        margin: $space-s 0 0 auto;
+        font-size: $font-size-s;
+      }
     }
 
     img {
-      margin: $space-l 0 0 $space-xl;
-      width: 100%;
-      max-height: 200px;
+      width: 30%;
       object-fit: cover;
     }
   }

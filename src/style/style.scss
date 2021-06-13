@@ -6,6 +6,28 @@ $space-xl: 24px;
 $font-size-s: 12px;
 $font-size-m: 14px;
 $font-size-l: 16px;
+$font-size-xl: 18px;
+
+$color-black: #07090b;
+
+$sp-max-width: 768px;
+
+@media screen and (max-width: $sp-max-width) {
+  .sp {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
+}
+@media screen and (min-width: $sp-max-width) {
+  .sp {
+    display: none;
+  }
+  .pc {
+    display: block;
+  }
+}
 
 * {
   font-family: "Noto Sans JP", sans-serif;
@@ -34,4 +56,11 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@mixin two-lines-three-point-reader() {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }

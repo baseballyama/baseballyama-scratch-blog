@@ -3,11 +3,10 @@
 .flex {
   display: flex;
   justify-content: center;
+  margin: 0 $space-l;
   .articles {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 70%;
+    margin-top: $space-m;
+    width: 100%;
     max-width: 780px;
   }
 }
